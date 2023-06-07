@@ -11,8 +11,14 @@ import {
   foodImg,
   mockup,
 } from "assets";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleWaitlist = () => {
+    navigate("/waitlist");
+  };
   return (
     <>
       <Navbar />
@@ -21,7 +27,7 @@ const Home = () => {
           <div className={`appContainer ${styles.hero}`}>
             <h1>Mr Order is Bringing something New</h1>
             <p>Be the first to know out when we go live</p>
-            <button>Join Waitlist</button>
+            <button onClick={handleWaitlist}>Join Waitlist</button>
           </div>
           <SmileImg className={styles.img} />
         </section>

@@ -1,3 +1,85 @@
+.containerBg {
+  background: radial-gradient(
+    114.26% 114.26% at 42.72% -14.26%,
+    rgba(239, 71, 35, 0.12) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+}
 .container {
-  
+  position: relative;
+  padding-top: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 11rem;
+  padding-bottom: 4rem;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 15px;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  input {
+    outline: none;
+    border: 1px solid #624947;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 12px;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .error {
+    font-size: 12px;
+    text-align: left;
+    margin-top: -10px;
+    color: red;
+    letter-spacing: 0.5px;
+  }
+
+  button {
+    background: #d93a04;
+    border-radius: 8px;
+    border: none;
+    padding: 12px;
+    color: #fff;
+    width: 100%;
+    margin-top: 2rem;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .cheers {
+    margin-bottom: 2rem;
+    width: 80%;
+    height: auto;
+    max-width: 300px;
+    margin-top: -3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    h1 {
+      font-size: 30px;
+    }
+  }
 }

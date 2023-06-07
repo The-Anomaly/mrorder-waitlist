@@ -3,5 +3,6 @@ import { ReactComponent as Logo } from "./logo.svg";
 import { ReactComponent as Tag } from "./tag.svg";
 import { ReactComponent as FastForward } from "./fastForward.svg";
 import { ReactComponent as OfficeBuilding } from "./officeBuilding.svg";
+import { ReactComponent as Cheers } from "./cheers.svg";
 
-export { SmileImg, Logo, Tag, FastForward, OfficeBuilding };
+export { SmileImg, Logo, Tag, FastForward, OfficeBuilding, Cheers };
