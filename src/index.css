@@ -1,0 +1,78 @@
+@import url(./assets/fonts/fonts.css);
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  transition: 0.3s;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --brown: #40211E;
+}
+
+body {
+  margin: 0;
+  font-family: 'FormaDJRDisplay';
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #40211E;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* width and height */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #828d9e;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--brown);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brown);
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+.appContainer {
+  max-width: 1180px;
+  margin: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .appContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

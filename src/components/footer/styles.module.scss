@@ -1,0 +1,59 @@
+.footerBg {
+  background: var(--brown);
+  color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 1.4rem;
+}
+
+.footer {
+  h4 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+  }
+
+  button {
+    background: #d93a04;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    padding: 12px 14px;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4rem;
+  }
+
+  p {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 0.3px;
+  }
+
+  a {
+    color: #ff4405;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  hr {
+    height: 1px;
+    background: #877371;
+    border: none;
+  }
+
+  .logo {
+    margin-left: auto;
+    display: block;
+    margin-top: 1.3rem;
+
+    path {
+      fill: #fff;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@font-face {
+  src: url("./FormaDJRDisplay-Hairline-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-Hairline-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  src: url("./FormaDJRDisplay-Thin-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-Thin-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  src: url("./FormaDJRDisplay-ExtraLight-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-ExtraLight-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: 275;
+}
+
+@font-face {
+  src: url("./FormaDJRDisplay-Light-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-Light-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  src: url("./FormaDJRDisplay-Regular-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-Regular-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("./FormaDJRDisplay-Medium-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-Medium-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url("./FormaDJRDisplay-Bold-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-Bold-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url("./FormaDJRDisplay-ExtraBold-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-ExtraBold-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  src: url("./FormaDJRDisplay-Black-Testing.woff2") format("woff2"),
+    url("./FormaDJRDisplay-Black-Testing.woff") format("woff");
+  font-family: "FormaDJRDisplay";
+  font-style: normal;
+  font-weight: 900;
+}
