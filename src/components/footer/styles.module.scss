@@ -57,3 +57,26 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .footer {
+    h4 {
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      margin-left: 0;
+    }
+  }
+}
