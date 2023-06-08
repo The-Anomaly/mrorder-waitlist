@@ -77,19 +77,19 @@ const Home = () => {
           <h3>Why we stand-out</h3>
           <div className={styles.standoutList}>
             <div>
-              <img src={deliveryImg} />
+              <img src={deliveryImg} alt="" />
               <p>Quick Delivery</p>
             </div>
             <div>
-              <img src={chefImg} />
+              <img src={chefImg} alt="" />
               <p>top rated restaurants </p>
             </div>
             <div>
-              <img src={foodImg} />
+              <img src={foodImg} alt="" />
               <p> 1000+ cuisines </p>
             </div>
             <div>
-              <img src={customerImg} />
+              <img src={customerImg} alt="" />
               <p>100% Satisfaction </p>
             </div>
           </div>
