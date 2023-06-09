@@ -31,7 +31,6 @@ export const useSheet = ({
     type: true,
   });
   const [loading, setLoading] = React.useState(false);
-  const [jwt, setJwt] = React.useState("");
 
   const getJWT = () => {
     if (!GOOGLE_PRIVATE_KEY || !GOOGLE_CLIENT_EMAIL) return;
@@ -56,13 +55,10 @@ export const useSheet = ({
     return signedJWT;
   };
 
-  React.useEffect(() => {
-    const signedJWT = getJWT();
-    setJwt(signedJWT);
-  }, []);
-
   const getTokenRequestData = () => {
-    if (jwt) {
+    const signedJWT = getJWT();
+    console.log(signedJWT);
+    if (signedJWT) {
       let urlEncodedData = "";
       let urlEncodedDataPairs: any[] = [];
 
@@ -72,10 +68,13 @@ export const useSheet = ({
           encodeURIComponent("urn:ietf:params:oauth:grant-type:jwt-bearer")
       );
       urlEncodedDataPairs.push(
-        encodeURIComponent("assertion") + "=" + encodeURIComponent(jwt)
+        encodeURIComponent("assertion") + "=" + encodeURIComponent(signedJWT)
       );
       urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
       return urlEncodedData;
+    } else {
+      setLoading(false);
+      errorResponse(message.error);
     }
   };
 
@@ -96,8 +95,8 @@ export const useSheet = ({
         })
         .catch((err) => {
           errorResponse(message.error);
-          setLoading(false)
-        })
+          setLoading(false);
+        });
     } else {
       setLoading(false);
       errorResponse(message.error);
