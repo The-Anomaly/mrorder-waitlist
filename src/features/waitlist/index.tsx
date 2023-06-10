@@ -46,27 +46,25 @@ const Waitlist = () => {
 
   const sendMessage = () => {
     setLoading(true);
-    const data = {
-      Time: new Date(),
-      Name: name.value,
-      Email: email.value,
-    };
+    const data = new FormData();
+    data.append("Time", new Date().toUTCString());
+    data.append("Name", name.value);
+    data.append("Email", email.value);
 
     if (!SCRIPT_API_URL) return;
 
     axios
       .post(SCRIPT_API_URL, data)
       .then((res) => {
-        console.log(res);
         setSuccess(true);
+        setLoading(false);
         setTimeout(() => {
           setEmail({ value: "", error: "" });
           setName({ value: "", error: "" });
-          setLoading(false);
+          setSuccess(false);
         }, 10000);
       })
       .catch((err) => {
-        console.log(err);
         setSuccess(false);
         setLoading(false);
       });
