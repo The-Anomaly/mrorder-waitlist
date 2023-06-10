@@ -2,7 +2,8 @@ import { Navbar } from "components";
 import styles from "./styles.module.scss";
 import { useState } from "react";
 import { Cheers } from "assets";
-import { useSheet } from "helpers/sheet";
+import { SCRIPT_API_URL } from "config";
+import axios from "axios";
 
 const regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
 
@@ -15,23 +16,8 @@ const Waitlist = () => {
     value: "",
     error: "",
   });
-  const [hasSubmitted, setHasSubmitted] = useState(false);
-
-  const onClose = () => {
-    setTimeout(() => {
-      setEmail({ value: "", error: "" });
-      setName({ value: "", error: "" });
-      setHasSubmitted(false);
-    }, 10000);
-  };
-
-  const { toast, closeSurveyToast, sendMessage, loading } = useSheet({
-    closeForm: onClose,
-    message: {
-      success: "You've been added to the waitlist!",
-      error: "Failed to add to waitlist, please try again later",
-    },
-  });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -55,19 +41,42 @@ const Waitlist = () => {
       }
       return;
     }
-    setHasSubmitted(true);
-    sendMessage({
-      name: name.value,
-      email: email.value,
-    });
-    console.log(email.value, name.value);
+    sendMessage();
+  };
+
+  const sendMessage = () => {
+    setLoading(true);
+    const data = {
+      Time: new Date(),
+      Name: name.value,
+      Email: email.value,
+    };
+
+    if (!SCRIPT_API_URL) return;
+
+    axios
+      .post(SCRIPT_API_URL, data)
+      .then((res) => {
+        console.log(res);
+        setSuccess(true);
+        setTimeout(() => {
+          setEmail({ value: "", error: "" });
+          setName({ value: "", error: "" });
+          setLoading(false);
+        }, 10000);
+      })
+      .catch((err) => {
+        console.log(err);
+        setSuccess(false);
+        setLoading(false);
+      });
   };
   return (
     <>
       <Navbar />
       <main className={styles.containerBg}>
         <section className={`appContainer ${styles.container}`}>
-          {toast.type && hasSubmitted ? (
+          {success ? (
             <>
               <Cheers className={styles.cheers} />
               <h1>Cheers {name.value}</h1>
